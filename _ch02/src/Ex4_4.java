@@ -5,7 +5,7 @@ class Ex4_4 {
 		int score  = 0;   // ������ �����ϱ� ���� ����
 		char grade =' ';  // ������ �����ϱ� ���� ����. �������� �ʱ�ȭ�Ѵ�.
 
-		System.out.print("������ �Է��ϼ���.>");
+		System.out.print("점수를 입력하세요.>");
 		Scanner scanner = new Scanner(System.in);
 		score = scanner.nextInt(); // ȭ���� ���� �Է¹��� ���ڸ� score�� ����
 
@@ -18,6 +18,6 @@ class Ex4_4 {
 		} else {                   // �������� D����
 			 grade = 'D'; 
 		}
-		System.out.println("����� ������ "+ grade +"�Դϴ�.");
+		System.out.println("당신의 학점은 "+ grade +"입니다.");
 	}
 }
