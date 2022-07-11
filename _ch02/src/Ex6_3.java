@@ -1,7 +1,7 @@
 class Ex6_3 {
 	public static void main(String args[]) {
-		System.out.println("Card.width = " + Card.width);
-		System.out.println("Card.height = " + Card.height);
+		System.out.println("Card.width = " + Card.width); //cv can made automatically
+		System.out.println("Card.height = " + Card.height); //cv can use without objects
 
 		Card c1 = new Card();
 		c1.kind = "Heart";
@@ -11,14 +11,14 @@ class Ex6_3 {
 		c2.kind = "Spade";
 		c2.number = 4;
 
-		System.out.println("c1Àº " + c1.kind + ", " + c1.number + "ÀÌ¸ç, Å©±â´Â (" + c1.width + ", " + c1.height + ")");
-		System.out.println("c2´Â " + c2.kind + ", " + c2.number + "ÀÌ¸ç, Å©±â´Â (" + c2.width + ", " + c2.height + ")");
-		System.out.println("c1ÀÇ width¿Í height¸¦ °¢°¢ 50, 80À¸·Î º¯°æÇÕ´Ï´Ù.");
-		c1.width = 50;
-		c1.height = 80;
+		System.out.println("c1ï¿½ï¿½ " + c1.kind + ", " + c1.number + "ï¿½Ì¸ï¿½, Å©ï¿½ï¿½ï¿½ (" + c1.width + ", " + c1.height + ")");
+		System.out.println("c2ï¿½ï¿½ " + c2.kind + ", " + c2.number + "ï¿½Ì¸ï¿½, Å©ï¿½ï¿½ï¿½ (" + c2.width + ", " + c2.height + ")");
+		System.out.println("c1ï¿½ï¿½ widthï¿½ï¿½ heightï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 50, 80ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+		Card.width = 50; //match with Class name and then, we can find easily cv
+		Card.height = 80;
 
-		System.out.println("c1Àº " + c1.kind + ", " + c1.number + "ÀÌ¸ç, Å©±â´Â (" + c1.width + ", " + c1.height + ")");
-		System.out.println("c2´Â " + c2.kind + ", " + c2.number + "ÀÌ¸ç, Å©±â´Â (" + c2.width + ", " + c2.height + ")");
+		System.out.println("c1ï¿½ï¿½ " + c1.kind + ", " + c1.number + "ï¿½Ì¸ï¿½, Å©ï¿½ï¿½ï¿½ (" + c1.width + ", " + c1.height + ")");
+		System.out.println("c2ï¿½ï¿½ " + c2.kind + ", " + c2.number + "ï¿½Ì¸ï¿½, Å©ï¿½ï¿½ï¿½ (" + c2.width + ", " + c2.height + ")");
 	}
 }
 
