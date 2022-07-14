@@ -23,6 +23,9 @@ public class InheritanceTest {
 		System.out.println("c.p.x="+c.p.x);
 		System.out.println("c.p.y="+c.p.y);
 		System.out.println("c.r="+c.r);
+		
+		System.out.println(c.toString());
+		System.out.println(c); //toString으로불러온거랑 동일
 	}
 
 }
