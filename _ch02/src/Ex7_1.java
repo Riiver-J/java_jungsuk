@@ -1,4 +1,4 @@
-class Tv {
+class Tvv {
 	boolean power; // ��������(on/off)
 	int channel;	// ä��
 
@@ -7,7 +7,7 @@ class Tv {
 	void channelDown() {   --channel;      }
 } //부모의멤버가 5
 
-class SmartTv extends Tv {  // CaptionTv�� Tv�� ĸ��(�ڸ�)�� �����ִ� ����� �߰�
+class SmartTv extends Tvv {  // CaptionTv�� Tv�� ĸ��(�ڸ�)�� �����ִ� ����� �߰�
 	boolean caption;     // ĸ�ǻ���(on/off)
 	void displayCaption(String text) {
 		if (caption) {   // ĸ�� ���°� on(true)�� ���� text�� ���� �ش�.
