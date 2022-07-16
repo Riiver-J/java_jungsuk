@@ -1,6 +1,6 @@
 package pkg1;
 
-class MyParent {
+public class MyParent { //접근제어자가 default라서 다른 package에서사용불가 > public 붙여줘
 	private 	int prv; //same class
 				int dft; //same package (default)omission
 	protected 	int prt; //same package + child(another package)
@@ -14,10 +14,10 @@ class MyParent {
 	}
 }
 
-public class MyParentTest {
+class MyParentTest {
 	public static void main(String[] args) {
 		MyParent p = new MyParent();
-		System.out.println(p.prv); //error
+//		System.out.println(p.prv); //error
 		System.out.println(p.dft); //ok
 		System.out.println(p.prt); //ok
 		System.out.println(p.pub); //ok
