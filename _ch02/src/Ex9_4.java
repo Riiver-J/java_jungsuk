@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 class Card2 {
 	String kind;
 	int number;
@@ -11,9 +13,10 @@ class Card2 {
 		this.number = number;
 	}
 	
-	//해쉬코드도 오버라이딩 해야됨
+	// equals()를 오버라이딩하면, hashCode()도 오버라이딩 해야됨
 	public int hashCode() {
-		
+		return Objects.hash(kind, number);
+				//objects클래스는 객체와 관련된 유용한 메서드를 제공하는 유틸 클래스
 	}
 	public boolean equals(Object obj) {	//오버라이딩시, 선언부가 일치해야됨(object써야)
 		if(!(obj instanceof Card2))
@@ -38,7 +41,7 @@ class Ex9_4 {
 		
 		System.out.println(c1.equals(c2)); //equals도 쓰려면 오버라이딩해야 됨
 
-		System.out.println(c1.toString());
-		System.out.println(c2.toString());
+		System.out.println(c1.hashCode());
+		System.out.println(c2.hashCode());
 	}
 }
