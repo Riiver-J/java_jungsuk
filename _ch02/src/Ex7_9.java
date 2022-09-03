@@ -1,13 +1,13 @@
 class Product2 {
-	int price;			// Á¦Ç°ÀÇ °¡°Ý
-	int bonusPoint;	// Á¦Ç°±¸¸Å ½Ã Á¦°øÇÏ´Â º¸³Ê½ºÁ¡¼ö
+	int price;			
+	int bonusPoint;	
 
 	Product2(int price) {
 		this.price = price;
 		bonusPoint = (int)(price/10.0);
 	}
 
-	Product2() {} // ±âº» »ý¼ºÀÚ
+	Product2() {} 
 }
 
 class Tv2 extends Product2 {
@@ -26,40 +26,40 @@ class Audio2 extends Product2 {
 	public String toString() { return "Audio"; }
 }
 
-class Buyer2 {			  // °í°´, ¹°°ÇÀ» »ç´Â »ç¶÷
-	int money = 1000;	  // ¼ÒÀ¯±Ý¾×
-	int bonusPoint = 0; // º¸³Ê½ºÁ¡¼ö
-	Product2[] cart = new Product2[10];   // ±¸ÀÔÇÑ Á¦Ç°À» ÀúÀåÇÏ±â À§ÇÑ ¹è¿­
-	int i =0;			  // Product¹è¿­¿¡ »ç¿ëµÉ Ä«¿îÅÍ
+class Buyer2 {			  
+	int money = 1000;	  
+	int bonusPoint = 0; 
+	Product2[] cart = new Product2[10];   
+	int i =0;			  
 
 	void buy(Product2 p) {
 		if(money < p.price) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ï¿½Ü¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 			return;
 		}
 
-		money -= p.price;             // °¡Áø µ·¿¡¼­ ±¸ÀÔÇÑ Á¦Ç°ÀÇ °¡°ÝÀ» »«´Ù.
-		bonusPoint += p.bonusPoint;   // Á¦Ç°ÀÇ º¸³Ê½º Á¡¼ö¸¦ Ãß°¡ÇÑ´Ù.
-		cart[i++] = p;                // Á¦Ç°À» Product[] cart¿¡ ÀúÀåÇÑ´Ù.
-		System.out.println(p + "À»/¸¦ ±¸ÀÔÇÏ¼Ì½À´Ï´Ù.");
+		money -= p.price;             
+		bonusPoint += p.bonusPoint;   
+		cart[i++] = p;                
+		System.out.println(p + "ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.");
 	}
-// µÞ ÆäÀÌÁö¿¡ °è¼ÓµË´Ï´Ù.
-	void summary() {	              // ±¸¸ÅÇÑ ¹°Ç°¿¡ ´ëÇÑ Á¤º¸¸¦ ¿ä¾àÇØ¼­ º¸¿© ÁØ´Ù.
-		int sum = 0;                 // ±¸ÀÔÇÑ ¹°Ç°ÀÇ °¡°ÝÇÕ°è
-		String itemList ="";         // ±¸ÀÔÇÑ ¹°Ç°¸ñ·Ï
 
-		// ¹Ýº¹¹®À» ÀÌ¿ëÇØ¼­ ±¸ÀÔÇÑ ¹°Ç°ÀÇ ÃÑ °¡°Ý°ú ¸ñ·ÏÀ» ¸¸µç´Ù.
+	void summary() {	              
+		int sum = 0;                 
+		String itemList ="";        
+
+		
 		for(int i=0; i<cart.length;i++) {
 			if(cart[i]==null) break;
 			sum += cart[i].price;
 			itemList += cart[i] + ", ";
 		}
-		System.out.println("±¸ÀÔÇÏ½Å ¹°Ç°ÀÇ ÃÑ±Ý¾×Àº " + sum + "¸¸¿øÀÔ´Ï´Ù.");
-		System.out.println("±¸ÀÔÇÏ½Å Á¦Ç°Àº " + itemList + "ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½Ñ±Ý¾ï¿½ï¿½ï¿½ " + sum + "ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ " + itemList + "ï¿½Ô´Ï´ï¿½.");
 	}
 }
 
-class Ex7_9 {
+class Ex7_9 { 
 	public static void main(String args[]) {
 		Buyer2 b = new Buyer2();
 
