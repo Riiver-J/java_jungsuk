@@ -27,12 +27,12 @@ class Ex12_3 {
 	}  // main
 }
 
-class FruitBox<T extends Fruit & Eatable> extends Box<T> {}
+class FruitBox<T extends Fruit & Eatable> extends Box<T> {}	//Eatable이 없어도 동일조상이므로 구현가능
 
 class Box<T> {
-	ArrayList<T> list = new ArrayList<T>();
-	void add(T item) { list.add(item);     }
-	T get(int i)     { return list.get(i); }
+	ArrayList<T> list = new ArrayList<T>();		//item을 저장할 리스트
+	void add(T item) { list.add(item);     }	//박스에item을추가
+	T get(int i)     { return list.get(i); }	//박스에서item	을꺼내올때
 	int size()       { return list.size(); }
 	public String toString() { return list.toString();}
 }
