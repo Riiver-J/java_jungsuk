@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+ import java.util.ArrayList;
 
 class Fruit2		       	{ public String toString() { return "Fruit";}}
 class Apple2 extends Fruit2	{ public String toString() { return "Apple";}}
@@ -24,12 +24,17 @@ class Juicer {
 class Ex12_4 {
 	public static void main(String[] args) {
 		FruitBox2<Fruit2> fruitBox = new FruitBox2<Fruit2>();
-		FruitBox2<Apple2> appleBox = new FruitBox2<Apple2>();
+		
+		//Fruit2와 그 자손들(Apple,Grape)
+		FruitBox2<? extends Fruit2> appleBox = new FruitBox2<Apple2>();	//참조변수쪽이 Fruit일경우 error	-> wildcard 사용으로 해결
+		appleBox = new FruitBox2<Fruit2>();	//하나의 참조변수로 대입된 지네릭 타입이 다 다른 객체들을 다룰 수 있게됨	
+		appleBox = new FruitBox2<Apple2>();
+		appleBox = new FruitBox2<Grape2>();
 
 		fruitBox.add(new Apple2());
 		fruitBox.add(new Grape2());
-		appleBox.add(new Apple2());
-		appleBox.add(new Apple2());
+//		appleBox.add(new Apple2());
+//		appleBox.add(new Apple2());
 
 		System.out.println(Juicer.makeJuice(fruitBox));
 		System.out.println(Juicer.makeJuice(appleBox));
