@@ -11,22 +11,11 @@ interface Eatable {}
 
 class Ex12_3 {
 	public static void main(String[] args) {
-		FruitBox<Fruit> fruitBox = new FruitBox<Fruit>();
-		FruitBox<Apple> appleBox = new FruitBox<Apple>();
-		FruitBox<Grape> grapeBox = new FruitBox<Grape>();
-//		FruitBox<Grape> grapeBox = new FruitBos<Apple>(); //error. 참조변수와 생성자간 타입 불일치
-//		FruitBox<Toy> toyBox = new FruitBox<Toy>();	//error. FruitBox에서는 Fruit상속받는타입&Eatable인터페이스를 구현하는타입이어야하므로
-		Box<Toy> toyBox2 = new Box<Toy>();	//Box에서는 제약조건x
-
-		fruitBox.add(new Fruit());
-		fruitBox.add(new Apple());
-		fruitBox.add(new Grape());
-		appleBox.add(new Apple());
-		grapeBox.add(new Grape());
-
-		System.out.println("fruitBox-"+fruitBox);
-		System.out.println("appleBox-"+appleBox);
-		System.out.println("grapeBox-"+grapeBox);
+		Box b = null;
+		Box<String> bStr = null;
+		
+		b = (Box)bStr;	// Box<String> -> Box : possible but warning
+		bStr = (Box<String>)b;	// Box -> Box<String> : possible but warning	
 	}  // main
 }
 
