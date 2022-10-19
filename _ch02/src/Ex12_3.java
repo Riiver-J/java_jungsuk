@@ -11,11 +11,7 @@ interface Eatable {}
 
 class Ex12_3 {
 	public static void main(String[] args) {
-		Box b = null;
-		Box<String> bStr = null;
-		
-		b = (Box)bStr;	// Box<String> -> Box : possible but warning
-		bStr = (Box<String>)b;	// Box -> Box<String> : possible but warning	
+		FruitBox<Fruit> fbox = newFruitBox<Fruit>
 	}  // main
 }
 
