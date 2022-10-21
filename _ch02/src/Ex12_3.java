@@ -11,7 +11,12 @@ interface Eatable {}
 
 class Ex12_3 {
 	public static void main(String[] args) {
-		FruitBox<Fruit> fbox = newFruitBox<Fruit>
+		FruitBox<? extends Fruit> fbox = (FruitBox<? extends Fruit>)new FruitBox<Fruit>();
+		//FruitBox<Apple> -> FruitBox<? extends Fruit> : ok
+		FruitBox<? extends Fruit> abox = new FruitBox<Apple>();
+		//FruitBox<? extends Fruit> -> FruitBox<Apple> : ok
+		
+		FruitBox<Apple> appleBox = (FruitBox<Apple>)abox; //ok, but warning
 	}  // main
 }
 
