@@ -1,11 +1,13 @@
 enum Direction2 { 
 	EAST(1, ">"), SOUTH(2,"V"), WEST(3, "<"), NORTH(4,"^");
 
+	//	iv
 	private static final Direction2[] DIR_ARR = Direction2.values();
 	private final int value;
 	private final String symbol;
 
-	Direction2(int value, String symbol) {
+	// constructor 
+	Direction2(int value, String symbol) {	// 접근제어자 private 생략됨
 		this.value  = value;
 		this.symbol = symbol;
 	}
@@ -36,7 +38,7 @@ enum Direction2 {
 
 class Ex12_6 {
 	public static void main(String[] args) {
-		for(Direction2 d : Direction2.values()) 
+		for(Direction2 d : Direction2.values()) //values : 모든 상수 반환(Direction2가 가지고있는 열거형의)	
 			System.out.printf("%s=%d%n", d.name(), d.getValue()); 
 
 		Direction2 d1 = Direction2.EAST;
@@ -44,7 +46,7 @@ class Ex12_6 {
 
 		System.out.printf("d1=%s, %d%n", d1.name(), d1.getValue());
 		System.out.printf("d2=%s, %d%n", d2.name(), d2.getValue());
-		System.out.println(Direction2.EAST.rotate(1));
+		System.out.println(Direction2.EAST.rotate(1));	// 시계방향으로 회전시킨값
 		System.out.println(Direction2.EAST.rotate(2));
 		System.out.println(Direction2.EAST.rotate(-1));
 		System.out.println(Direction2.EAST.rotate(-2));
