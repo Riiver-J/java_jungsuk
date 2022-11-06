@@ -3,7 +3,7 @@ import java.lang.annotation.*;
 @Deprecated
 @SuppressWarnings("1111") // 유효하지 않은 애너테이션은 무시된다.
 @TestInfo(testedBy="aaa", testDate=@DateTime(yymmdd="160101",hhmmss="235959"))
-class Ex12_8 {
+class Ex12_8 {	// because of @Deprcated
 	public static void main(String args[]) {
 		// Ex12_8의 Class객체를 얻는다.
 		Class<Ex12_8> cls = Ex12_8.class;
@@ -18,7 +18,7 @@ class Ex12_8 {
 
 		System.out.println();
 
-		// Ex12_8에 적용된 모든 애너테이션을 가져온다
+		// Ex12_8에 적용된 모든 애너테이션을 가져온다.
 		Annotation[] annoArr = cls.getAnnotations();
 
 		for(Annotation a : annoArr)
@@ -26,11 +26,11 @@ class Ex12_8 {
 	} // main의 끝
 }
 
-@Retention(RetentionPolicy.RUNTIME)  // 실행 시에 사용가능하도록 지정 
+@Retention(RetentionPolicy.RUNTIME)  // Retention:언제까지 유지될수있는지->실행시(Runtime)	
 @interface TestInfo {
 	int       count()	  	default 1;
 	String    testedBy();
-	String[]  testTools() 	default "JUnit";
+	String[]  testTools() 	default {"JUnit","JUnit5"};
 	TestType  testType()    default TestType.FIRST;
 	DateTime  testDate();
 }
