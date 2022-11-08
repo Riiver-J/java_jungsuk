@@ -5,8 +5,8 @@ class Ex13_1 {
 		Runnable r = new ThreadEx1_2();
 		Thread t2 = new Thread(r);	  
 
-		t1.start();
-		t2.start();
+		t1.start();	//0
+		t2.start();	//1
 	}
 }
 
