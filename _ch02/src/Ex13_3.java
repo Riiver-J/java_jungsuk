@@ -9,7 +9,7 @@ class Ex13_3 {
 		for(int i=0; i < 300; i++)
 			System.out.printf("%s", new String("-"));	
 
-		System.out.print("1:" + (System.currentTimeMillis() - Ex13_3.startTime));
+		System.out.print("소요시간1:" + (System.currentTimeMillis() - Ex13_3.startTime));
 	} 
 }
 
@@ -18,6 +18,6 @@ class ThreadEx3_1 extends Thread {
 		for(int i=0; i < 300; i++)
 			System.out.printf("%s", new String("|"));	
 
-		System.out.print("2:" + (System.currentTimeMillis() - Ex13_3.startTime));
+		System.out.print("소요시간2:" + (System.currentTimeMillis() - Ex13_3.startTime));
 	}
 }
